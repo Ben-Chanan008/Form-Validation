@@ -10,6 +10,7 @@ body{
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 fieldset{
@@ -44,7 +45,7 @@ a{
     border-radius: .3rem;
     text-decoration: none;
     /* color: #000; */
-    font-family: 'agency-fb';
+    font-family: 'agency-fb', 'sans-serif';
 }
 
 .empty{
@@ -53,4 +54,18 @@ a{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 20px;
     border-radius: 2.3rem;
+}
+
+.lists > div ul {
+    background-color: #ccc;
+    color: #000;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: .3rem;
+}
+
+.lists > div ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
