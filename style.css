@@ -2,71 +2,71 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "lato";
+    src: url("./Lato/Lato-Bold.ttf");
+}
+
 body{
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'lato';
 }
 
-fieldset{
-    margin-left: 400px;
-    margin-right: 400px;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-form > div{
-    margin:20px 0 ;
-}
-
-input{
-    margin: auto;
+form > input{
     display: block;
+    margin: auto;
+    padding: 10px;
+    border-radius: 2.3em;
+    width: 300px;
+    margin-top: 20px;
+    border: 05px solid black;
+}
+
+form > input:focus{
+    outline: none;
+}
+
+h2{
     text-align: center;
-    padding: 5px;
 }
 
-a{
-    padding: 10px;
-    background-color: darkblue;
-    color: #fff;
-    border: none;
-    border-radius: .3rem;
-    text-decoration: none;
-    /* color: #000; */
-    font-family: 'agency-fb', 'sans-serif';
-}
-
-.empty{
-    background-color: #ff0000;
-    color: #fff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 20px;
-    border-radius: 2.3rem;
-}
-
-.lists > div ul {
-    background-color: #ccc;
-    color: #000;
+.parent{
+    padding: 50px;
     width: 50%;
-    margin: 0 auto;
-    border-radius: .3rem;
+    margin: auto;
+    margin-top: 90px;
+    border: 2px solid #ff0000;
 }
 
-.lists > div ul li{
-    margin-top: 10px;
-    margin-bottom: 10px;
+input[type*='submit']:hover{
+    height: 60px;
+    border: 5px solid #ccc;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.error{
+    background-color: #d49b9b;
+    color: #333; 
     padding: 10px;
-    font-weight: bold;
+    border-radius: 2.3em;
+    text-align: center;
+}
+
+.success{
+    background-color: rgb(143, 214, 143);
+    color: #fff; 
+    padding: 10px;
+    border-radius: 2.3em;
+    text-align: center;
+}
+
+.users li{
+    background-color: #ccc;
+    color: #333;
+    margin: auto;
+    border-radius: .3em;
+    margin-top: 15px;
+    padding: 10px;
+    width: 50%;
 }

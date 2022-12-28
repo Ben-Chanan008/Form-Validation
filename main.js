@@ -1,14 +1,40 @@
 const nameInput = document.querySelector('#name');
-const myForm = document.querySelector('#myform');
-const phoneInput = document.querySelector('#number');
-const message = document.querySelector('.msg');
+const form = document.querySelector('#myform');
+const  emailInput = document.querySelector('#email');
+const  errorMsg = document.querySelector('.msg');
+const  userLists = document.querySelector('.users');
 
-myForm.addEventListener('submit', onSubmit);
+form.addEventListener('submit', onSubmit);
+
 function onSubmit(e){
-    // e.preventDefault();
-    console.log("success")
-    // if(nameInput.value === '' || phoneInput.value === ''){
-    //     message.classList.add('empty');
-    //     message.innerHTML = 'PLEASE ENTER FIELDS';
-    // }
+    e.preventDefault();
+
+    if(nameInput.value === '' || emailInput.value === ''){
+        errorMsg.classList.add('error');
+        errorMsg.innerHTML = "NAME AND EMAIL PLEASE";
+        setTimeout(() => {
+            errorMsg.classList.remove('error');
+            errorMsg.innerHTML = '';
+        }, 3000);
+    } else {
+        console.log('success');
+        errorMsg.classList.add('success')
+        errorMsg.innerHTML = 'Success';
+
+        setTimeout((clearfields), 3000)
+
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${nameInput.value} | ${emailInput.value}`));
+
+        userLists.appendChild(li);
+
+    }
+
+}
+
+function clearfields(){
+    nameInput.value = '';
+    emailInput.value = '';
+    errorMsg.classList.remove('success')
+    errorMsg.innerHTML = '';
 }
